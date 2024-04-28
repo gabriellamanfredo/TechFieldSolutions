@@ -1,0 +1,242 @@
+/* Estilização geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); 
+  padding: 1.25rem 0; 
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 1.875rem; 
+  font-size: 1.25rem; 
+  font-weight: 700;
+  gap: 4.5rem; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display:flex;
+  padding: 1.25rem 0;
+  margin: auto;
+  justify-content: center;
+}
+
+footer img{
+  padding: 1.6rem;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer nav p {
+  flex: 0 0 100%;
+}
+
+footer nav ul {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Estilização página Home */
+.container_index {
+  padding: 1rem 2rem; 
+  flex: 1;
+  width: min(70rem, 100%); 
+  margin: 0 auto;
+}
+
+/* Estilos do main */
+.main-content {
+  padding: 3.125rem 0; 
+}
+
+.empresa h1 {
+  font-size: 2.25rem; 
+  margin-top: 1.25rem; 
+  margin-bottom: 0.9375rem; 
+}
+
+.empresa p {
+  font-size: 1.125rem; 
+  text-align: justify;
+}
+
+.solucao h2,
+.diferenciais h2,
+.clientes h2 {
+  font-size: 1.5rem; 
+  margin-top: 1.5625rem; 
+  margin-bottom: 1.25rem; 
+  font-weight: 700;
+}
+
+.solucao ul,
+.diferenciais ul,
+.clientes ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.solucao li,
+.diferenciais li {
+  flex-basis: calc(33.33% - 1.25rem);
+  margin-bottom: 1.25rem; 
+  text-align: center;
+}
+
+.solucao li img {
+  width: 9.375rem; 
+  height: 9.375rem; 
+  margin-bottom: 0.625rem; 
+  margin-bottom: 0.625rem;
+  border-radius: 50%;
+}
+
+.diferenciais li img {
+  width: 6.25rem; 
+  height: 6.25rem; 
+  margin-bottom: 0.625rem; 
+}
+
+.solucao li p,
+.diferenciais li p,
+.clientes li p {
+  font-size: 1rem; 
+}
+
+.clientes li img {
+  width: 15rem;
+  height: 10rem;
+  margin-bottom: 0.625rem;
+}
+
+/* Estilização página Sobre nós */
+.container_sobre {
+  padding: 1rem 2rem; 
+  flex: 1;
+  width: min(70rem, 100%); 
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.125rem;;
+}
+
+.historia, 
+.missao, 
+.valores,
+.visao {
+  margin-bottom: 15px;
+}
+
+.valores li span{
+  font-weight: bold;
+}
+
+/* Estilização página Contato */
+
+.container_contato {
+  padding: 1rem 2rem; 
+  flex: 1;
+  width: min(70rem, 100%); 
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.125rem;;
+}
+
+.horario img, 
+.telefone img, 
+.endereco img{
+  width: 7.375rem; 
+  height: 7.375rem; 
+  margin-bottom: 0.625rem; 
+  margin-bottom: 0.625rem;
+  border-radius: 50%;
+}
+
+.atendimento{
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+
+}
+
+.nome input, 
+.email input,
+.mensagem input{
+ line-height: 1.8rem;
+}
+
+.horario,
+.telefone,
+.endereco{
+  margin: 1.875rem;
+}
+
+.endereco iframe{
+  border-radius: 10%;
+}
+/* Estilização página Integrantes */
+.container_integrantes {
+  padding: 1rem 2rem; 
+  flex: 1;
+  width: min(70rem, 100%); 
+  margin: 0 auto;
+}
+
+.container_integrantes h1 {
+  margin-bottom: 1.25px;
+}
+
+.container_integrantes p {
+  margin-bottom: 0.625px;
+}
