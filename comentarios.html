@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comentários</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="web">
+    <header>
+      <nav>
+        <img src="./assets/img/logo-incial.png" alt="">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="sobrenos.html">Sobre nós</a>
+          </li>
+          <li>
+            <a href="contato.html">Contato</a>
+          </li>
+          <li>
+            <a href="comentarios.html">Comentários</a>
+          </li>
+          <li>
+            <a href="integrantes.html">Integrantes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container_index">
+        <section class="comments">
+          <h1>Comentários</h1>
+          <div id="comments"></div> <!-- Aqui é onde os comentários serão inseridos -->
+          <form id="commentForm" onsubmit="return submitComment()">
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <textarea id="message" placeholder="Seu comentário" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <img src="./assets/img/logo-incial.png" class="logo">
+      <nav>
+        <p>Fale com a gente</p>
+        <p>080012345678</p>
+        <p>Av. Paulista, 283/287 - Vila Mariana, São Paulo - SP, 04002-030</p>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="sobrenos.html">Sobre nós</a>
+          </li>
+          <li>
+            <a href="contato.html">Contato</a>
+          </li>
+          <li>
+            <a href="comentarios.html">Comentários</a>
+          </li>
+          <li>
+            <a href="integrantes.html">Integrantes</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Carrega os comentários quando a página carrega
+        loadComments();
+      });
+
+      // Função para carregar os comentários
+      function loadComments() {
+        $.getJSON('comentarios.php', function (data) {
+          // Limpa a div de comentários
+          $('#comments').empty();
+
+          // Adiciona cada comentário à div
+          $.each(data, function (index, comment) {
+            $('#comments').append('<p><strong>' + comment.name + ':</strong> ' + comment.message + '</p>');
+          });
+        });
+      }
+    </script>
+  </div>
+
+</body>
+
+</html>
