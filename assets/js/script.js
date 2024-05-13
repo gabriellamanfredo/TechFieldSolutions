@@ -52,39 +52,3 @@ function enviar() {
     alert("Preencha o formulário corretamente.");
   }
 }
-
-$(document).ready(function () {
-  // Carrega os comentários quando a página carrega
-  loadComments();
-
-  // Quando o formulário é enviado
-  $('#comment-form').submit(function (e) {
-    e.preventDefault();
-
-    // Pega os dados do formulário
-    var name = $('#name').val();
-    var message = $('#message').val();
-
-    // Envia os dados para o arquivo PHP
-    $.post('comentarios.php', { name: name, message: message }, function () {
-      // Após enviar, recarrega os comentários
-      loadComments();
-      // Limpa os campos do formulário
-      $('#name').val('');
-      $('#message').val('');
-    });
-  });
-});
-
-// Função para carregar os comentários
-function loadComments() {
-  $.getJSON('comentarios.php', function (data) {
-    // Limpa a div de comentários
-    $('#comments').empty();
-
-    // Adiciona cada comentário à div
-    $.each(data, function (index, comment) {
-      $('#comments').append('<p><strong>' + comment.name + ':</strong> ' + comment.message + '</p>');
-    });
-  });
-}
