@@ -51,4 +51,17 @@ function enviar() {
   } else {
     alert("Preencha o formulário corretamente.");
   }
+<<<<<<< HEAD
+=======
+}
+
+async function OpenElement() {
+  await fetch('../php/ElementsId.php?email=' + email + "&comentario=" + comentario, { //qual arquivo? não entendi
+  })
+    .then(response => response.text())
+    .then(data => document.getElementById("DivProperties").innerHTML = data);
+
+  document.getElementsByClassName('dropdown')[0].style.display = 'none';
+  document.getElementsByClassName('arrow')[0].style.display = 'none';
+>>>>>>> feature_comentarios
 }

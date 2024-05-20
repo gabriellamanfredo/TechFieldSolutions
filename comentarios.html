@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Integrantes</title>
-  
+
+  <title>Comentários</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">,
+
 </head>
 
 <body>
-  <div>
+
+  <div class="web">
     <header>
       <nav>
         <img src="./assets/img/logo-incial.png" alt="">
@@ -38,37 +40,27 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <div class="container_integrantes">
-        <h1>Integrantes</h1>
-        <h3>Arthur Emanuel Bezerra de Lima</h3>
-        <p>RA: 323100127</p>
-        <h3>Enrico Rozati</h3> 
-        <p> 322101799</p>
-        <h3>Fhelipe Augusto Santos do Nascimento</h3> 
-        <p> 324102233</p>
-        <h3>Gabriel de Paula do Nascimento</h3> 
-        <p>322102747</p>
-        <h3>Gabriella Santos Manfredo</h3> 
-        <p> 323103175</p>
-        <h3>Geovanna Sueli Gama Pirone</h3> 
-        <p> 323100842</p>
-        <h3>Guilherme Pires Rosa</h3> 
-        <p>323201898</p>
-        <h3>Leonardo Avelino Telles Pio</h3> 
-        <p> 323201386</p>
-        <h3>Marcelo Santana Jannini</h3> 
-        <p> 322102064</p>
-        <h3>Nickolas Victor Lagedo</h3> 
-        <p> 323100408</p>
-        <h3>Pablo Henrique De Souza Spacca</h3> 
-        <p> 322101721</p>
-        <h3>Rafaella Viana Oliveira</h3> 
-        <p> 324100841</p>
-        <h3>Yasmin Vedovato</h3> 
-        <p> 324101594</p>
+      <div class="container_comentarios">
+        <section class="comments">
+          <h1>Comentários</h1>
+          <div id="comments"></div> <!-- Aqui é onde os comentários serão inseridos -->
+          <form id="commentForm" onsubmit="OpenElement()">
+            <div>
+              <h3>Email</h3>
+              <input type="text" id="name" placeholder="Seu email" required class="input_comentarios">
+            </div>
+            <div>
+              <h3>Comentário</h3>
+              <textarea id="message" placeholder="Seu comentário" required class="input_comentarios"></textarea>
+            </div>
+            <button type="submit" class="button">Enviar</button>
+          </form>
+        </section>
       </div>
     </main>
+
     <footer>
       <img src="./assets/img/logo-incial.png" class="logo">
       <nav>
@@ -94,6 +86,9 @@
         </ul>
       </nav>
     </footer>
+    
+    <script src="./assets/js/script.js"></script>
   </div>
+
 </body>
 </html>
