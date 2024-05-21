@@ -24,16 +24,9 @@
       'email' => $email,
       'comentario' => $comentario
     );
-
-    if(!is_dir("../json/")) {
-      mkdir('../json/TextInput.json', 0777, true);
-    }
-        
-    if(!is_dir("../json/TextInput.json" . $elemento)) {
-      mkdir('../json/TextInput.json' . $elemento, 0777, true);
-    }
     
-    $FileWrite = "../json/" . $elemento . '/TextInput.json';
+    $json = $data.$InputText;
+    $FileWrite = "../json/TextInput.json";
 
     $json = json_encode($data);
     $InputText = fopen($FileWrite, 'w');
