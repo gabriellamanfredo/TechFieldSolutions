@@ -53,8 +53,11 @@ function enviar() {
   }
 }
 
-async function OpenElement() {
-  await fetch('../php/ElementsId.php?email=' + email + "&comentario=" + comentario, { 
+async function SavaDados() {
+  let email = document.getElementById("email").value;
+  let comentario = document.getElementById("message").value;
+
+  await fetch('../php/SaveDados.php?email=' + email + "&comentario=" + comentario, { 
   })
     .then(response => response.text())
     .then(document.getElementById("mostrar_comentarios").innerHTML = <div>"mostrar_comentarios"</div>);

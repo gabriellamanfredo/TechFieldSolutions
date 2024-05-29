@@ -7,30 +7,30 @@
 
   if ($_GET) {
 
-    $elemento = $_GET['nome'];
     $email = $_GET['email'];
     $comentario = $_GET['comentario'];
        
     $Opened = "../json/TextInput.json";
     $arquivo = fopen($Opened, 'r');
     $InputText = fgets($arquivo, 8192);
+
     fclose($arquivo);
 
     echo $InputText;
         
     $data = json_decode($InputText);
 
-    $data = array(
+    $datas = array(
       'email' => $email,
       'comentario' => $comentario
     );
     
-    $json = $data.$InputText;
+    $json = $datas.$data;
     $FileWrite = "../json/TextInput.json";
 
-    $json = json_encode($data);
+    $jsons = json_encode($json);
     $InputText = fopen($FileWrite, 'w');
-    fwrite($InputText, $json);
+    fwrite($InputText, $jsons);
     fclose($InputText);
 
   }
